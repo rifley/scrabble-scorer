@@ -19,8 +19,11 @@ public class Scrabble {
     System.out.println("wordletters" + wordLetters.length);
 
     for(int i = 0; i<wordLetters.length;i++){
-      if((wordLetters[i].equals("a")) || (wordLetters[i].equals("e"))){
-        result+=1;
+      for(int b=0; b<alphabet.length;b++){
+        if(wordLetters[i].equals(alphabet[b])){
+          result+=letterPoints[b];
+        }
+      }
       }
       else {
         System.out.println("else");
